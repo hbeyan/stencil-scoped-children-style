@@ -1,4 +1,5 @@
 import { Config } from '@stencil/core';
+import { sass } from '@stencil/sass';
 
 export const config: Config = {
   namespace: 'scoped-children-styles',
@@ -20,6 +21,8 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
+  buildEs5: true,
+  plugins: [sass()],
   testing: {
     browserHeadless: "new",
   },
